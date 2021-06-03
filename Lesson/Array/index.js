@@ -1,12 +1,13 @@
 // Khai báo mảng
+    //let menu = [];
     // let menu = ['Cháo gà', 'Cháo trai', 'Cháo lươn'];
     // console.log(menu);
     // let menu = ['Cháo gà', 4, 'Cháo Vịt', 5];
     // console.log(menu);
     // for(let i = 0; i < menu.length; i++) console.log(typeof menu[i]);
     //1. Init
-    let phim = ['Ironman', "Caption American", "Hulk", 'Avenger', 'Antman'];
-    console.log(phim);
+    // let phim = ['Ironman', "Caption American", "Hulk", 'Avenger', 'Antman'];
+    // console.log(phim);
     //2. Create
     // Khi dùng hàm push thì js sẽ thêm phần tử vào vị trí cuối của Array
     // let newMovie = prompt("Enter a your movie you like?");
@@ -42,3 +43,28 @@
             // for(let i = 0; i < phim.length; i++) console.log(phim[i]);
         //b
             // for(let i = 0; i < Math.floor(phim.length/2); i++) console.log(phim[i]);
+        //c
+            // for(let i = 0; i < phim.length; i++) console.log((i + 1) + '. ' + phim[i]);
+
+    //7. Update all
+        // for(let i = 0; i < phim.length; i++) console.log(phim[i].toUpperCase());
+    
+    //8. While
+    //a
+        // let username = prompt("Register an username");
+        // while(username.length > 15){
+        //     alert("Your user name is too long");
+        //     username = prompt("Register an username");
+        // }
+        // alert("Good username");
+
+    //b
+        let yourChoice = Number(prompt("How many legs does a spider have?\n" + "1. None\n" + "2. 4 legs\n" + "3. 8 legs\n" + "4. 12 legs"));
+        while(yourChoice != 1 && yourChoice != 2 && yourChoice != 3 && yourChoice != 4 && yourChoice == null){
+            alert("Your choice an invalid choice. Please choice again!");
+            yourChoice = Number(prompt("How many legs does a spider have?\n" + "1. None\n" + "2. 4 legs\n" + "3. 8 legs\n" + "4. 12 legs"));
+        }
+        if(yourChoice == 0) alert("Thanks");
+        else if(yourChoice != 3) alert("Good luck next time");
+        else alert("Bravo, you are correct");
+        
