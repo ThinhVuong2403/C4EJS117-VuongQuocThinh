@@ -59,12 +59,28 @@
         // alert("Good username");
 
     //b
-        let yourChoice = Number(prompt("How many legs does a spider have?\n" + "1. None\n" + "2. 4 legs\n" + "3. 8 legs\n" + "4. 12 legs"));
-        while(yourChoice != 1 && yourChoice != 2 && yourChoice != 3 && yourChoice != 4 && yourChoice == null){
-            alert("Your choice an invalid choice. Please choice again!");
-            yourChoice = Number(prompt("How many legs does a spider have?\n" + "1. None\n" + "2. 4 legs\n" + "3. 8 legs\n" + "4. 12 legs"));
+        while(true){
+            let yourChoice = prompt("How many legs does a spider have?\n" + "1. None\n" + "2. 4 legs\n" + "3. 8 legs\n" + "4. 12 legs");
+            if(yourChoice == undefined){
+                alert("Thanks");
+                break;
+            }
+            else{
+                if(yourChoice < 1) alert("Your choice an invalid choice. Please choice again!");
+                else if(yourChoice < 3){
+                    alert("Good luch your time");
+                    break;
+                }
+                else if(yourChoice == 3){
+                    alert("Bravo, you are correct");
+                    break;
+                }
+                else if(yourChoice == 4){
+                    alert("Good luch your time");
+                    break;
+                }
+                else alert("Your choice an invalid choice. Please choice again!");
+            }
         }
-        if(yourChoice == 0) alert("Thanks");
-        else if(yourChoice != 3) alert("Good luck next time");
-        else alert("Bravo, you are correct");
+        
         
