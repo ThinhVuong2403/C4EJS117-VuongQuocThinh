@@ -200,6 +200,7 @@
         // alert(`${init} ==> ${al}`);
         ////console.log(...al);
     //c2: Dùng filter
+    //Test git
         let a = [];
         let init = prompt("Enter a number");
         a = init.split(",");
