@@ -1,0 +1,47 @@
+.wrapper{
+    width: 960px;
+    background: #66ccff;
+    margin: auto;
+}
+
+.top__header{
+    height: 120px;
+    margin: 0px;
+}
+
+.top__header__left{
+    display: block;
+    height: 100%;
+    float: left;
+}
+
+.top__header__left img{
+    display: block;
+    height: 100%;
+}
+
+.top__header__title{
+    margin: auto;
+    padding: auto;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clear-both{
+    clear: both;
+}
+h2{
+    margin: 0px;
+}
+.content{
+    background: wheat;
+    margin: 0px;
+}
