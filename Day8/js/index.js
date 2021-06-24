@@ -351,9 +351,6 @@ let timeSheetData = [{
 },
 ];
 
-function removeLine(n){
-    timeSheetData.splice(n,1);
-}
 
 let body = document.getElementById("ts_tbody");
 function showTable(){
@@ -362,7 +359,7 @@ function showTable(){
         <td>${i.project}</td>
         <td>${i.task}</td>
         <td>${i.timeSpent}</td>
-        <td><button onclick = "removeLine()">x</button></td>
+        <td><button>x</button></td>
         </tr>`;
     }
 }
@@ -383,7 +380,7 @@ btnAddProject.addEventListener('click', () => {
         <td>${itemProject.project}</td>
         <td>${itemProject.task}</td>
         <td>${itemProject.timeSpent}</td>
-        <td><button onclick = "removeLine()">x</button></td>
+        <td><button>x</button></td>
         </tr>`;
 })
 
