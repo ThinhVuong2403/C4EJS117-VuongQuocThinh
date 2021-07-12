@@ -13,6 +13,8 @@ btnSignInForm.addEventListener('click',() => {
 const login  = document.getElementById("login");
 const username = document.getElementById("username");
 const pass = document.getElementById("pass");
+const rmCheck = document.getElementById("rememberMe");
+
 
 login.addEventListener('click', (e) => {
     e.preventDefault();
@@ -41,12 +43,36 @@ login.addEventListener('click', (e) => {
         switch(localStorage.getItem('position')){
             case 'HRNhanvien':
                 location.replace("HRNhanvien.html");
-                console.log(position);
+                break;
             case 'HRKho':
                 location.replace("HRKho.html");
-                console.log(position);
-            }
+                break;
+        }
     }
     
 });
 
+//Xét giá trị cho checkbox của Remember
+if(localStorage.checkbox && localStorage.checkbox !== ''){
+    rmCheck.setAttribute("checked","checked");
+    username.value = localStorage.username;
+    pass.value = localStorage.pass;
+}
+else{
+    rmCheck.removeAttribute("checked");
+    username.value = "";
+    pass.value = "";
+}
+
+login.addEventListener('click',() => {
+    if(rmCheck.checked && username.value !== "" && pass.value !== ""){
+        localStorage.username = username.value;
+        localStorage.pass = pass.value;
+        localStorage.checkbox = rmCheck.value;
+    }
+    else{
+        localStorage.username = "";
+        localStorage.pass = "";
+        localStorage.checkbox = "";
+    }
+});
