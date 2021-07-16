@@ -30,5 +30,5 @@ btnCopyColor.addEventListener('click', () => {
 });
 
 gradient.addEventListener('click', () => {
-    wrapper.style.backgroundColor = "gradient";
+    
 });
