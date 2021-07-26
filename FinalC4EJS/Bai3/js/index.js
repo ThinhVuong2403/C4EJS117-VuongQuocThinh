@@ -22,11 +22,12 @@ let ma;
 btnPickColor.addEventListener('click', () =>{
     ma = getMa();
     wrapper.style.backgroundColor = ma;
-    document.getElementById("color").innerHTML = ma;
+    document.getElementById("color").value = ma;
 });
 
 btnCopyColor.addEventListener('click', () => {
-    console.log(ma);
+    document.getElementById("color").select();
+    document.execCommand("copy");
 });
 
 gradient.addEventListener('click', () => {
